@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Informer - Next Gen News</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="logo">INFOR<span>MER</span></div>
+        <nav>
+            <ul id="menu">
+                <li onclick="fetchNews('India')">Home</li>
+                <li onclick="fetchNews('Politics')">Rajniti</li>
+                <li onclick="fetchNews('Business')">Business</li>
+                <li onclick="fetchNews('Bollywood')">Bollywood</li>
+            </ul>
+        </nav>
+        <div class="search-box">
+            <input type="text" id="search-input" placeholder="City/Topic..." onkeypress="handleEnter(event)">
+            <button onclick="searchNews()">Search</button>
+        </div>
+        <button id="dark-mode-toggle">Dark Mode</button>
+    </header>
+
+    <div class="ticker-container">
+        <span class="ticker-label">BREAKING:</span>
+        <marquee id="ticker-text">Loading top headlines...</marquee>
+    </div>
+
+    <main>
+        <section class="shorts-section">
+            <h2 class="section-title">Informer Shorts 🔥</h2>
+            <div class="shorts-wrapper" id="shorts-container">Loading Shorts...</div>
+        </section>
+
+        <section>
+            <h2 class="section-title" id="main-title">Latest Headlines</h2>
+            <div id="news-grid" class="news-grid"></div>
+        </section>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>
